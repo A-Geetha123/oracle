@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Faculty Team - Department of Computer Science and Applications</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      width: 280px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 25px;
+      border-top: 2px solid #004080;
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #0059b3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Faculty Team - Department of Computer Science and Applications</h1>
+  </header>
+
+  <main>
+    <div class="card">
+       <img src="geetha.jpg" alt="Dr. Alice">
+    <h3>Dr. A. Geetha</h3>
+    <p>Computer Applications</p>
+    <p>Expert in Java programming and 25+ years of experience.</p>
+  
+  </div>
+
+  <div class="card">
+    <img src="Beula.jpg" alt="Dr.T.Beula Bell">
+    <h3>Dr.T.Beula Bell</h3>
+    <p>Computer Applications</p>
+    <p>Specialist in Data mining 20+ years of experience</p>
+   
+  </div>
+
+  <div class="card">
+    <img src="latha.jpg" alt="Dr. D. Latha">
+    <h3>Dr. D. Latha</h3>
+    <p>Computer Science</p>
+    <p>Expert in Image Processing and 25+ years of experience.</p>
+
+    </div>
+  </main>
+
+  <div class="contact-form">
+    <h2>Contact Form</h2>
+    <form id="contactForm" onsubmit="return validateForm()">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById("fullname").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if (name === "") {
+        alert("Full Name is required.");
+        return false;
+      }
+
+      if (email === "") {
+        alert("Email is required.");
+        return false;
+      }
+
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+
+      if (message.length < 20) {
+        alert("Message must be at least 20 characters long.");
+        return false;
+      }
+
+      alert("Your message has been sent successfully!");
+      return true;
+    }
+  </script>
+
+</body>
+</html>

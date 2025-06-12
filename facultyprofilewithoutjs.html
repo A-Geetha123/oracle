@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Faculty Team - Department of Computer Science and Applications</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .card {
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .card p {
+      margin: 5px 0;
+    }
+
+    .card a.button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #003366;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .card a.button:hover {
+      background-color: #0055aa;
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      border-top: 2px solid #003366;
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .contact-form button {
+      background-color: #003366;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #0055aa;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Faculty Team - Department of Computer Science and Applications</h1>
+  </header>
+
+  <main>
+    <div class="card">
+       <img src="geetha.jpg" alt="Dr. Alice">
+    <h3>Dr. A. Geetha</h3>
+    <p>Computer Applications</p>
+    <p>Expert in Java programming and 25+ years of experience.</p>
+  
+  </div>
+
+  <div class="card">
+    <img src="Beula.jpg" alt="Dr.T.Beula Bell">
+    <h3>Dr.T.Beula Bell</h3>
+    <p>Computer Applications</p>
+    <p>Specialist in Data mining 20+ years of experience</p>
+   
+  </div>
+
+  <div class="card">
+    <img src="latha.jpg" alt="Dr. D. Latha">
+    <h3>Dr. D. Latha</h3>
+    <p>Computer Science</p>
+    <p>Expert in Image Processing and 25+ years of experience.</p>
+
+    </div>
+
+    
+  </main>
+
+  <div class="contact-form" id="contact">
+    <h2>Contact a Faculty Member</h2>
+    <form action="/submit" method="post">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" minlength="20" required></textarea>
+<button type="button" onclick="alert('Your message has been sent successfully!')">Send Message </button>
+      
+    </form>
+  </div>
+
+</body>
+</html>
